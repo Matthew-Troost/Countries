@@ -4,6 +4,7 @@ import './Styles/index.css';
 import App from './Pages/App';
 import Notfound from './Pages/NotFound';
 import Countries from './Pages/Countries';
+import Country from './Pages/Country';
 import * as serviceWorker from './serviceWorker';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -20,6 +21,7 @@ function Application() {
                 <Switch>
                     <Route exact path="/" component={App} />
                     <Route exact path="/countries" component={Countries} />
+                    <Route exact path="/countries/:code" component={Country} />
                     <Route component={Notfound} />
                 </Switch>
             </Router>
